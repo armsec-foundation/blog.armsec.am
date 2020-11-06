@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>ArmSec</title>
+ <link href="/atom.xml" rel="self"/>
+ <link href="https://blog.armsec.am/"/>
+ <updated>2020-11-06T16:24:07+00:00</updated>
+ <id>https://blog.armsec.am</id>
+ <author>
+   <name>ArmSec Team</name>
+   <email>info@armsec.org</email>
+ </author>
+
+ 
+ <entry>
+   <title>General Mac OS Security Configurations</title>
+   <link href="https://blog.armsec.am/2020/10/30/macos-hardening/"/>
+   <updated>2020-10-30T00:00:00+00:00</updated>
+   <id>https://blog.armsec.am/2020/10/30/macos-hardening</id>
+   <content type="html">&lt;p&gt;In this post we’ve aggregated all the necessary configurations one needs to
+harden his/her MacOS based machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;spotlight&quot;&gt;Spotlight&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences&lt;/strong&gt; ‣ &lt;strong&gt;Spotlight&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Unselect &lt;strong&gt;Allow Spotlight Suggestions in Look up&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/001-spotlight.png&quot; alt=&quot;Spotlight&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;security--privacy&quot;&gt;Security &amp;amp; Privacy&lt;/h2&gt;
+
+&lt;h3 id=&quot;general&quot;&gt;General&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences&lt;/strong&gt; ‣ &lt;strong&gt;Security &amp;amp; Privacy&lt;/strong&gt; ‣ &lt;strong&gt;General&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Require password immediately after sleep or screen saver begins&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is also recommended not to install applications outside of the AppStore.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Select &lt;strong&gt;App Store&lt;/strong&gt; at &lt;strong&gt;Allow apps downloaded from:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/002-privacy-general.png&quot; alt=&quot;Security &amp;amp; Privacy ‣ General&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Security &amp;amp; Privacy ‣ General&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Click on &lt;strong&gt;Advanced&lt;/strong&gt; button to open additional settings.&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Require an administrator password to access system-wide preferences&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/003-privacy-general-advanced.png&quot; alt=&quot;Security &amp;amp; Privacy ‣ General&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;filevault&quot;&gt;FileVault&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/FileVault&quot;&gt;FileVault&lt;/a&gt; provides full disk
+(technically, full volume) encryption on macOS. FileVault encryption protects
+data at rest and hardens (but not always prevents) someone with physical access
+from stealing data or tampering with your Mac.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Security &amp;amp; Privacy ‣ FileVault&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Turn On FileVault&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/004-filevault.png&quot; alt=&quot;FileVault&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;firewall&quot;&gt;Firewall&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Security &amp;amp; Privacy ‣ Firewall&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Turn On Firewall&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Then select &lt;strong&gt;Firewall Options…&lt;/strong&gt;, and ensure all check boxes are checked.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/005-firewall.png&quot; alt=&quot;Firewall&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;privacy&quot;&gt;Privacy&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Security &amp;amp; Privacy ‣ Privacy&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Look for the &lt;strong&gt;Advertising&lt;/strong&gt; section, then unselect &lt;strong&gt;Limit Ad Tracking&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/006-advertising.png&quot; alt=&quot;Advertising&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Look for the &lt;strong&gt;Analytics &amp;amp; Improvements&lt;/strong&gt; section,
+then unselect &lt;strong&gt;Share Mac Analytics&lt;/strong&gt; &amp;amp; &lt;strong&gt;Improve Siri &amp;amp; Dictation&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/007-analytics.png&quot; alt=&quot;Analytics &amp;amp; Improvements&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Look for &lt;strong&gt;Full Disk Access&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Review the selections and remove any other applications you don’t want to
+have access to your disk.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/008-fulldisk-access.png&quot; alt=&quot;Full Disk Access&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Select &lt;strong&gt;Location Services&lt;/strong&gt;, then unselect applications that don’t
+need to use your Location.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/009-location-services.png&quot; alt=&quot;Location Services&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;software-updates&quot;&gt;Software Updates&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Software Update&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Check that you’re on the latest version of macOS, update to latest
+version if needed and select &lt;strong&gt;Automatically keep my Mac up-to-date&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/010-autoupdate.png&quot; alt=&quot;Software Update&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Select Advanced, and check all of the check boxes under &lt;strong&gt;Automatically:&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/011-update-advanced.png&quot; alt=&quot;Advanced Update Settings&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;dns-configuration&quot;&gt;DNS Configuration&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Network ‣ Advanced ‣ DNS&lt;/strong&gt; tab.&lt;/li&gt;
+  &lt;li&gt;Ensure &lt;strong&gt;DNS Servers&lt;/strong&gt; are configured to use CloudFlare, Google and OpenDNS:
+    &lt;ul&gt;
+      &lt;li&gt;1.1.1.1&lt;/li&gt;
+      &lt;li&gt;8.8.8.8&lt;/li&gt;
+      &lt;li&gt;208.67.220.220&lt;/li&gt;
+      &lt;li&gt;208.67.222.222&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Remove any other addresses.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/012-dns.png&quot; alt=&quot;DNS&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;bluetooth&quot;&gt;Bluetooth&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Bluetooth&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Click &lt;strong&gt;Turn Bluetooth Off&lt;/strong&gt; when not in use.&lt;/li&gt;
+  &lt;li&gt;To make Bluetooth on/off switching faster, enable Bluetooth icon on Menu Bar
+    &lt;ul&gt;
+      &lt;li&gt;Check the &lt;strong&gt;Show Bluetooth in menu bar&lt;/strong&gt; checkbox.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/013-bluetooth.png&quot; alt=&quot;Bluetooth&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sharing&quot;&gt;Sharing&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Sharing&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Ensure all of the services below are unchecked:
+    &lt;ul&gt;
+      &lt;li&gt;Screen Sharing&lt;/li&gt;
+      &lt;li&gt;File Sharing&lt;/li&gt;
+      &lt;li&gt;Media Sharing&lt;/li&gt;
+      &lt;li&gt;Printer Sharing&lt;/li&gt;
+      &lt;li&gt;Remote Login&lt;/li&gt;
+      &lt;li&gt;Remote Management&lt;/li&gt;
+      &lt;li&gt;Remote Apple Events&lt;/li&gt;
+      &lt;li&gt;Bluetooth Sharing&lt;/li&gt;
+      &lt;li&gt;Internet Sharing&lt;/li&gt;
+      &lt;li&gt;Content Caching&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Change your Computer Name to something that isn’t directly identifiable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/014-sharing.png&quot; alt=&quot;Sharing&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;wake-on-wifi&quot;&gt;Wake on WiFi&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Energy Saver ‣ Power Adapter&lt;/strong&gt; tab&lt;/li&gt;
+  &lt;li&gt;Unselect Wake for Wi-Fi network access.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/015-wake-on-wifi.png&quot; alt=&quot;Wake on WiFi&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;date--time&quot;&gt;Date &amp;amp; Time&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Date &amp;amp; Time ‣ Time Zone&lt;/strong&gt; tab&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Set time zone automatically using current location&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/016-time-zone.png&quot; alt=&quot;Time Zone&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;backup&quot;&gt;Backup&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Time Machine&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Recommend turning on &lt;strong&gt;Back Up Automatically&lt;/strong&gt; if in possession of an external
+drive.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;icloud&quot;&gt;iCloud&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Apple ID&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;If you’re using iCloud, ensure that you’ve configured two-step verification.
+Check out the &lt;a href=&quot;https://support.apple.com/en-nz/HT204152&quot;&gt;Apple’s official guide&lt;/a&gt;
+to enable 2FA.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;do-not-use-a-user-with-administrative-privileges&quot;&gt;Do not use a user with administrative privileges&lt;/h2&gt;
+
+&lt;p&gt;Create standard user for general usage. Use administrator user when you require
+administrative privileges.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/018-standard-user.png&quot; alt=&quot;Standard User&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;disable-auto-login&quot;&gt;Disable Auto Login&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Go to &lt;strong&gt;System Preferences ‣ Users &amp;amp; Groups&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Press &lt;strong&gt;Login Options&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;strong&gt;Off&lt;/strong&gt; in the &lt;strong&gt;Automatic login&lt;/strong&gt; drop down menu&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/019-autologin.png&quot; alt=&quot;Automatic login&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;system-integration&quot;&gt;System Integration&lt;/h2&gt;
+
+&lt;p&gt;Make sure the system integrity protection is on (available on El Capitan and
+later). Run the following command in the Terminal app.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;csrutil status
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-10-30/017-sip-check.png&quot; alt=&quot;SIP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;More details are available &lt;a href=&quot;https://support.apple.com/en-us/HT204899&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;firmware-password&quot;&gt;Firmware Password&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;IMPORTANT!&lt;/strong&gt; When firmware password is forgotten, the only way to recover is
+to bring your mac to an official Apple Store or Apple Certified Service
+Provider.&lt;/p&gt;
+
+&lt;p&gt;Setting a firmware password prevents a Mac from starting up from any device
+other than the startup disk. It may also be set to be required on each boot.
+This may be useful for mitigating some attacks which require physical access to
+hardware. See the official Apple’s instructions
+&lt;a href=&quot;https://support.apple.com/en-am/HT204455&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;resources-and-tools&quot;&gt;Resources and Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NIST developed scripts that handle different aspects of macOS configuration
+parameters. It is available open source on
+&lt;a href=&quot;https://github.com/usnistgov/applesec&quot;&gt;GitHub&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/drduh/macOS-Security-and-Privacy-Guide&quot;&gt;GitHub drduh/macOS-Security-and-Privacy-Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/macoclock/macos-catalina-hardening-quick-tips-7288d7acf09d&quot;&gt;https://medium.com/macoclock/macos-catalina-hardening-quick-tips-7288d7acf09d&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/0xmachos/mOSL&quot;&gt;GitHub 0xmachos/mOSL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://csrc.nist.gov/CSRC/media/Publications/sp/800-179/rev-1/draft/documents/sp800-179r1-draft.pdf&quot;&gt;Guide to Securing macOS 10.12 4 Systems for IT Professionals&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://objective-see.com/products.html&quot;&gt;Third party tools for security&lt;/a&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;Do not install Lulu firewall, it has a lot of bugs and can cause a lot
+of problems.&lt;/li&gt;
+      &lt;li&gt;ReiKey tool: Malware and other applications can install persistent keyboard
+“event taps” to intercept your keystrokes. ReiKey can scan, detect, and
+monitor for such taps.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+
+</feed>

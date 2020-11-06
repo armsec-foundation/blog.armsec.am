@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      General Mac OS Security Configurations &middot; ArmSec
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="ArmSec" href="/atom.xml">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="General Mac OS Security Configurations" />
+<meta name="author" content="ArmSec Team" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="In this post we’ve aggregated all the necessary configurations \ one needs to harden his/her MacOS based machine." />
+<meta property="og:description" content="In this post we’ve aggregated all the necessary configurations \ one needs to harden his/her MacOS based machine." />
+<link rel="canonical" href="https://blog.armsec.am/2020/10/30/macos-hardening/" />
+<meta property="og:url" content="https://blog.armsec.am/2020/10/30/macos-hardening/" />
+<meta property="og:site_name" content="ArmSec" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="General Mac OS Security Configurations" />
+<meta name="twitter:site" content="@armsec" />
+<meta name="twitter:creator" content="@ArmSec Team" />
+<script type="application/ld+json">
+{"description":"In this post we’ve aggregated all the necessary configurations \\ one needs to harden his/her MacOS based machine.","datePublished":"2020-10-30T00:00:00+00:00","url":"https://blog.armsec.am/2020/10/30/macos-hardening/","dateModified":"2020-10-30T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.armsec.am/2020/10/30/macos-hardening/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blog.armsec.am/assets/apple-touch-icon-precomposed.png"},"name":"ArmSec Team"},"author":{"@type":"Person","name":"ArmSec Team"},"headline":"General Mac OS Security Configurations","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="">
+          ArmSec
+        </a>
+      </h1>
+      <p class="lead"></p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="sidebar-nav-item" href="">Home</a>
+
+      
+
+      
+      
+        
+          
+        
+      
+        
+          
+            <a class="sidebar-nav-item" href="/about/">About</a>
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+      
+    </nav>
+
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <div class="container content">
+      <main>
+        <article class="post">
+  <h1 class="post-title">General Mac OS Security Configurations</h1>
+  <time datetime="2020-10-30T00:00:00+00:00" class="post-date">30 Oct 2020</time>
+  <p>In this post we’ve aggregated all the necessary configurations one needs to
+harden his/her MacOS based machine.</p>
+
+<h2 id="spotlight">Spotlight</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences</strong> ‣ <strong>Spotlight</strong>.</li>
+  <li>Unselect <strong>Allow Spotlight Suggestions in Look up</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/001-spotlight.png" alt="Spotlight" /></p>
+
+<h2 id="security--privacy">Security &amp; Privacy</h2>
+
+<h3 id="general">General</h3>
+
+<ul>
+  <li>Go to <strong>System Preferences</strong> ‣ <strong>Security &amp; Privacy</strong> ‣ <strong>General</strong> tab.</li>
+  <li>Select <strong>Require password immediately after sleep or screen saver begins</strong>.</li>
+</ul>
+
+<p>It is also recommended not to install applications outside of the AppStore.</p>
+
+<ul>
+  <li>Select <strong>App Store</strong> at <strong>Allow apps downloaded from:</strong></li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/002-privacy-general.png" alt="Security &amp; Privacy ‣ General" /></p>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Security &amp; Privacy ‣ General</strong> tab.</li>
+  <li>Click on <strong>Advanced</strong> button to open additional settings.</li>
+  <li>Select <strong>Require an administrator password to access system-wide preferences</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/003-privacy-general-advanced.png" alt="Security &amp; Privacy ‣ General" /></p>
+
+<h3 id="filevault">FileVault</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/FileVault">FileVault</a> provides full disk
+(technically, full volume) encryption on macOS. FileVault encryption protects
+data at rest and hardens (but not always prevents) someone with physical access
+from stealing data or tampering with your Mac.</p>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Security &amp; Privacy ‣ FileVault</strong> tab.</li>
+  <li>Select <strong>Turn On FileVault</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/004-filevault.png" alt="FileVault" /></p>
+
+<h3 id="firewall">Firewall</h3>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Security &amp; Privacy ‣ Firewall</strong> tab.</li>
+  <li>Select <strong>Turn On Firewall</strong>.</li>
+  <li>Then select <strong>Firewall Options…</strong>, and ensure all check boxes are checked.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/005-firewall.png" alt="Firewall" /></p>
+
+<h3 id="privacy">Privacy</h3>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Security &amp; Privacy ‣ Privacy</strong> tab.</li>
+  <li>Look for the <strong>Advertising</strong> section, then unselect <strong>Limit Ad Tracking</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/006-advertising.png" alt="Advertising" /></p>
+
+<ul>
+  <li>Look for the <strong>Analytics &amp; Improvements</strong> section,
+then unselect <strong>Share Mac Analytics</strong> &amp; <strong>Improve Siri &amp; Dictation</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/007-analytics.png" alt="Analytics &amp; Improvements" /></p>
+
+<ul>
+  <li>Look for <strong>Full Disk Access</strong>.</li>
+  <li>Review the selections and remove any other applications you don’t want to
+have access to your disk.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/008-fulldisk-access.png" alt="Full Disk Access" /></p>
+
+<ul>
+  <li>Select <strong>Location Services</strong>, then unselect applications that don’t
+need to use your Location.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/009-location-services.png" alt="Location Services" /></p>
+
+<h2 id="software-updates">Software Updates</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Software Update</strong></li>
+  <li>Check that you’re on the latest version of macOS, update to latest
+version if needed and select <strong>Automatically keep my Mac up-to-date</strong>.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/010-autoupdate.png" alt="Software Update" /></p>
+
+<ul>
+  <li>Select Advanced, and check all of the check boxes under <strong>Automatically:</strong></li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/011-update-advanced.png" alt="Advanced Update Settings" /></p>
+
+<h2 id="dns-configuration">DNS Configuration</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Network ‣ Advanced ‣ DNS</strong> tab.</li>
+  <li>Ensure <strong>DNS Servers</strong> are configured to use CloudFlare, Google and OpenDNS:
+    <ul>
+      <li>1.1.1.1</li>
+      <li>8.8.8.8</li>
+      <li>208.67.220.220</li>
+      <li>208.67.222.222</li>
+    </ul>
+  </li>
+  <li>Remove any other addresses.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/012-dns.png" alt="DNS" /></p>
+
+<h2 id="bluetooth">Bluetooth</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Bluetooth</strong></li>
+  <li>Click <strong>Turn Bluetooth Off</strong> when not in use.</li>
+  <li>To make Bluetooth on/off switching faster, enable Bluetooth icon on Menu Bar
+    <ul>
+      <li>Check the <strong>Show Bluetooth in menu bar</strong> checkbox.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/013-bluetooth.png" alt="Bluetooth" /></p>
+
+<h2 id="sharing">Sharing</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Sharing</strong></li>
+  <li>Ensure all of the services below are unchecked:
+    <ul>
+      <li>Screen Sharing</li>
+      <li>File Sharing</li>
+      <li>Media Sharing</li>
+      <li>Printer Sharing</li>
+      <li>Remote Login</li>
+      <li>Remote Management</li>
+      <li>Remote Apple Events</li>
+      <li>Bluetooth Sharing</li>
+      <li>Internet Sharing</li>
+      <li>Content Caching</li>
+    </ul>
+  </li>
+  <li>Change your Computer Name to something that isn’t directly identifiable.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/014-sharing.png" alt="Sharing" /></p>
+
+<h2 id="wake-on-wifi">Wake on WiFi</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Energy Saver ‣ Power Adapter</strong> tab</li>
+  <li>Unselect Wake for Wi-Fi network access.</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/015-wake-on-wifi.png" alt="Wake on WiFi" /></p>
+
+<h2 id="date--time">Date &amp; Time</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Date &amp; Time ‣ Time Zone</strong> tab</li>
+  <li>Select <strong>Set time zone automatically using current location</strong></li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/016-time-zone.png" alt="Time Zone" /></p>
+
+<h2 id="backup">Backup</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Time Machine</strong></li>
+  <li>Recommend turning on <strong>Back Up Automatically</strong> if in possession of an external
+drive.</li>
+</ul>
+
+<h2 id="icloud">iCloud</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Apple ID</strong></li>
+  <li>If you’re using iCloud, ensure that you’ve configured two-step verification.
+Check out the <a href="https://support.apple.com/en-nz/HT204152">Apple’s official guide</a>
+to enable 2FA.</li>
+</ul>
+
+<h2 id="do-not-use-a-user-with-administrative-privileges">Do not use a user with administrative privileges</h2>
+
+<p>Create standard user for general usage. Use administrator user when you require
+administrative privileges.</p>
+
+<p><img src="/assets/images/2020-10-30/018-standard-user.png" alt="Standard User" /></p>
+
+<h2 id="disable-auto-login">Disable Auto Login</h2>
+
+<ul>
+  <li>Go to <strong>System Preferences ‣ Users &amp; Groups</strong></li>
+  <li>Press <strong>Login Options</strong></li>
+  <li>Select <strong>Off</strong> in the <strong>Automatic login</strong> drop down menu</li>
+</ul>
+
+<p><img src="/assets/images/2020-10-30/019-autologin.png" alt="Automatic login" /></p>
+
+<h2 id="system-integration">System Integration</h2>
+
+<p>Make sure the system integrity protection is on (available on El Capitan and
+later). Run the following command in the Terminal app.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>csrutil status
+</code></pre></div></div>
+
+<p><img src="/assets/images/2020-10-30/017-sip-check.png" alt="SIP" /></p>
+
+<p>More details are available <a href="https://support.apple.com/en-us/HT204899">here</a>.</p>
+
+<h2 id="firmware-password">Firmware Password</h2>
+
+<p><strong>IMPORTANT!</strong> When firmware password is forgotten, the only way to recover is
+to bring your mac to an official Apple Store or Apple Certified Service
+Provider.</p>
+
+<p>Setting a firmware password prevents a Mac from starting up from any device
+other than the startup disk. It may also be set to be required on each boot.
+This may be useful for mitigating some attacks which require physical access to
+hardware. See the official Apple’s instructions
+<a href="https://support.apple.com/en-am/HT204455">here</a>.</p>
+
+<h2 id="resources-and-tools">Resources and Tools</h2>
+
+<ul>
+  <li>NIST developed scripts that handle different aspects of macOS configuration
+parameters. It is available open source on
+<a href="https://github.com/usnistgov/applesec">GitHub</a>.</li>
+  <li><a href="https://github.com/drduh/macOS-Security-and-Privacy-Guide">GitHub drduh/macOS-Security-and-Privacy-Guide</a></li>
+  <li><a href="https://medium.com/macoclock/macos-catalina-hardening-quick-tips-7288d7acf09d">https://medium.com/macoclock/macos-catalina-hardening-quick-tips-7288d7acf09d</a></li>
+  <li><a href="https://github.com/0xmachos/mOSL">GitHub 0xmachos/mOSL</a></li>
+  <li><a href="https://csrc.nist.gov/CSRC/media/Publications/sp/800-179/rev-1/draft/documents/sp800-179r1-draft.pdf">Guide to Securing macOS 10.12 4 Systems for IT Professionals</a></li>
+  <li><a href="https://objective-see.com/products.html">Third party tools for security</a>.
+    <ul>
+      <li>Do not install Lulu firewall, it has a lot of bugs and can cause a lot
+of problems.</li>
+      <li>ReiKey tool: Malware and other applications can install persistent keyboard
+“event taps” to intercept your keystrokes. ReiKey can scan, detect, and
+monitor for such taps.</li>
+    </ul>
+  </li>
+</ul>
+
+</article>
+
+
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2020-11-06T16:24:07+00:00">2020</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>
