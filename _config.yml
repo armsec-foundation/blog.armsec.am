@@ -6,6 +6,10 @@ paginate: 1
 baseurl: ""
 permalink: pretty
 
+twitter:
+  username: armsec
+logo: /assets/apple-touch-icon-precomposed.png
+
 # Gems
 plugins:
   - jekyll-gist

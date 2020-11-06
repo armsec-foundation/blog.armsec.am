@@ -1,7 +1,12 @@
 ---
 layout: post
 title: General Mac OS Security Configurations
+description: In this post we've aggregated all the necessary configurations \
+  one needs to harden his/her MacOS based machine.
 ---
+
+In this post we've aggregated all the necessary configurations one needs to
+harden his/her MacOS based machine.
 
 
 ## Spotlight
